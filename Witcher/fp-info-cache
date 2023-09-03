@@ -1,4 +1,4 @@
-21580100668729860
+21613924800971036
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -89649,6 +89649,13 @@ Axes_Magnetic_Lefthand_Xdown
 0
 0
 iclr
+BUK9M1140HX
+BUK9M11-40HX
+MOSFET (N-Channel)
+0
+11
+11
+iclr
 CAPC2012X145N
 
 
@@ -89691,6 +89698,13 @@ GCT_USB4110-GF-A_REVB
 16
 16
 iclr
+IC_TPS61089RNRR
+
+
+0
+12
+12
+iclr
 INDC1006X60N
 
 
@@ -89707,6 +89721,20 @@ INDM8681X400N
 iclr
 INDPM3030X200N
 74438
+Inductor
+0
+2
+2
+iclr
+INDPM110100X540N
+SRP1050WA-100M
+Inductor
+0
+2
+2
+iclr
+INDPM112100X400N
+WLPMA0A040M2R2LC
 Inductor
 0
 2
@@ -89761,6 +89789,13 @@ MAX1771CSA&plus_
 8
 8
 iclr
+MGAH1004R68M-10
+
+
+0
+2
+2
+iclr
 MIT_logo
 
 
@@ -89774,6 +89809,27 @@ MOLEX_78646-3001
 0
 14
 14
+iclr
+MP28167GQ-A-P
+
+
+0
+16
+16
+iclr
+MP28167GQ-A-Z
+
+
+0
+16
+16
+iclr
+MPLAL60504R7
+MPL-AL6050-4R7-1
+Inductor
+0
+2
+2
 iclr
 Molex_Mini-Fit_Jr_5569-06A2_2x03_P4.20mm_Horizontal_No_Mounting_Holes
 Molex Mini-Fit Jr. Power Connectors, old mpn/engineering number: 5569-06A2, example for new mpn: 39-30-0060, 3 Pins per row, Mounting: Snap-in Plastic Peg PCB Lock (http://www.molex.com/pdm_docs/sd/039300020_sd.pdf), generated with kicad-footprint-generator
@@ -89795,6 +89851,13 @@ connector Molex Nano-Fit top entry
 0
 2
 2
+iclr
+P160KN0QC20A10K
+P160KN-0QC20A10K-2
+Variable Resistor
+0
+3
+3
 iclr
 PHOENIX_1757242
 
@@ -89838,6 +89901,13 @@ QFN40P700X700X90-57N
 57
 57
 iclr
+QFN50P400X400X80-21N-D
+T2044Y+6C
+Integrated Circuit
+0
+21
+21
+iclr
 QFN50P400X400X95-24N
 
 
@@ -89865,6 +89935,13 @@ Integrated Circuit
 0
 48
 48
+iclr
+SER2011202MLD
+SER2011-202MLD-1
+Inductor
+0
+3
+3
 iclr
 SI7315DNT1GE3
 SI7315DN-T1-GE3-1
@@ -89943,12 +90020,26 @@ SOT95P280X145-6N
 6
 6
 iclr
+SOT95P282X145-5N
+SOT25_
+Integrated Circuit
+0
+5
+5
+iclr
 SOTFL50P160X60-8N
 DRL0008A
 Integrated Circuit
 0
 8
 8
+iclr
+SQS850ENT1_GE3
+PowerPAK 1212-8 Single
+MOSFET (P-Channel)
+0
+11
+11
 iclr
 SR0502CTG
 SOT-143
@@ -90061,6 +90152,48 @@ XDCR_DPS310
 0
 8
 8
+iclr
+XFL2010183MEC
+XFL2010-183MEC-1
+Inductor
+0
+2
+2
+iclr
+astronautPete30mmwide
+
+
+0
+0
+0
+iclr
+buckaroo
+
+
+0
+0
+0
+iclr
+cheshire
+
+
+0
+0
+0
+iclr
+chinesebuck
+
+
+0
+0
+0
+iclr
+daisychain
+
+
+0
+0
+0
 iclr
 iclr_logo
 
