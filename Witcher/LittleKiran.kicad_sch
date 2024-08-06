@@ -7334,7 +7334,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_Molex:Molex_Nano-Fit_105313-xx02_1x02_P2.50mm_Horizontal"
+		(property "Footprint" "iclr:Molex_Nano-Fit_105313-xx02_1x02_P2.50mm_Horizontal"
 			(at 60.96 91.44 0)
 			(effects
 				(font
