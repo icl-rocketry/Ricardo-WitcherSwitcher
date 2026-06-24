@@ -1,13 +1,15 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "e63e39d7-6ac0-4ffd-8aa3-1841a4541b55")
 	(paper "A4")
 	(lib_symbols
 		(symbol "Connector:Conn_01x02_Pin"
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -81,16 +83,26 @@
 				)
 			)
 			(symbol "Conn_01x02_Pin_1_1"
-				(polyline
-					(pts
-						(xy 1.27 -2.54) (xy 0.8636 -2.54)
-					)
+				(rectangle
+					(start 0.8636 0.127)
+					(end 0 -0.127)
 					(stroke
 						(width 0.1524)
 						(type default)
 					)
 					(fill
-						(type none)
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
 					)
 				)
 				(polyline
@@ -105,26 +117,16 @@
 						(type none)
 					)
 				)
-				(rectangle
-					(start 0.8636 -2.413)
-					(end 0 -2.667)
+				(polyline
+					(pts
+						(xy 1.27 -2.54) (xy 0.8636 -2.54)
+					)
 					(stroke
 						(width 0.1524)
 						(type default)
 					)
 					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start 0.8636 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type outline)
+						(type none)
 					)
 				)
 				(pin passive line
@@ -164,11 +166,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:LED"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -236,10 +243,22 @@
 			(symbol "LED_0_1"
 				(polyline
 					(pts
-						(xy -1.27 -1.27) (xy -1.27 1.27)
+						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
 					)
 					(stroke
-						(width 0.254)
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
+					)
+					(stroke
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -260,7 +279,7 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+						(xy -1.27 -1.27) (xy -1.27 1.27)
 					)
 					(stroke
 						(width 0.254)
@@ -272,22 +291,10 @@
 				)
 				(polyline
 					(pts
-						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
 					)
 					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
-					)
-					(stroke
-						(width 0)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -333,11 +340,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R_Small"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0.254) hide)
+				(offset 0.254)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -455,6 +467,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "GND_1"
 			(power)
@@ -534,7 +547,8 @@
 			(symbol "GND_1_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "GND"
 						(effects
 							(font
@@ -551,6 +565,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "GND_2"
 			(power)
@@ -630,7 +645,8 @@
 			(symbol "GND_2_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "GND"
 						(effects
 							(font
@@ -647,11 +663,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Mechanical:MountingHole_Pad"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -749,6 +770,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Power_Management:LTC4412xS6"
 			(exclude_from_sim no)
@@ -847,24 +869,6 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at 0 -10.16 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin input line
 					(at -10.16 -2.54 0)
 					(length 2.54)
@@ -876,24 +880,6 @@
 						)
 					)
 					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin open_collector line
-					(at 10.16 -2.54 180)
-					(length 2.54)
-					(name "STAT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -919,6 +905,24 @@
 						)
 					)
 				)
+				(pin power_in line
+					(at 0 -10.16 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 				(pin input line
 					(at 10.16 2.54 180)
 					(length 2.54)
@@ -937,7 +941,26 @@
 						)
 					)
 				)
+				(pin open_collector line
+					(at 10.16 -2.54 180)
+					(length 2.54)
+					(name "STAT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "SQS141ELNW-T1_GE3_1"
 			(exclude_from_sim no)
@@ -1061,17 +1084,6 @@
 				)
 			)
 			(symbol "SQS141ELNW-T1_GE3_1_0_1"
-				(circle
-					(center -1.778 1.27)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
 				(polyline
 					(pts
 						(xy -2.54 1.27) (xy -1.778 1.27)
@@ -1108,10 +1120,56 @@
 						(type none)
 					)
 				)
+				(circle
+					(center -1.778 1.27)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -0.508) (xy -1.778 2.032) (xy 1.778 2.032) (xy 1.778 -0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(polyline
 					(pts
 						(xy -0.508 -0.508) (xy 0.508 -0.508)
 					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.016) (xy -0.381 0) (xy 0.381 0) (xy 0 1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 0 0.381)
+					(radius 2.794)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -1130,54 +1188,6 @@
 					)
 					(fill
 						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -0.508) (xy 2.286 -0.508)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 1.27) (xy 0 1.27) (xy 0 -0.508)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.778 -0.508) (xy -1.778 2.032) (xy 1.778 2.032) (xy 1.778 -0.508)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 1.016) (xy -0.381 0) (xy 0.381 0) (xy 0 1.016)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
 					)
 				)
 				(polyline
@@ -1204,9 +1214,10 @@
 						(type none)
 					)
 				)
-				(circle
-					(center 0 0.381)
-					(radius 2.794)
+				(polyline
+					(pts
+						(xy 1.27 -0.508) (xy 2.286 -0.508)
+					)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -1226,29 +1237,24 @@
 						(type outline)
 					)
 				)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy 0 1.27) (xy 0 -0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 			)
 			(symbol "SQS141ELNW-T1_GE3_1_1_1"
 				(pin passive line
-					(at 5.08 1.27 270)
-					(length 2.54) hide
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
 					(at -5.08 1.27 270)
-					(length 2.54) hide
+					(length 2.54)
+					(hide yes)
 					(name ""
 						(effects
 							(font
@@ -1283,8 +1289,141 @@
 					)
 				)
 				(pin passive line
+					(at -5.08 1.27 270)
+					(length 2.54)
+					(hide yes)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 1.27 270)
+					(length 2.54)
+					(hide yes)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 1.27 270)
+					(length 2.54)
+					(hide yes)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 1.27 270)
+					(length 2.54)
+					(hide yes)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 1.27 270)
+					(length 2.54)
+					(hide yes)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 0 -6.35 90)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
 					(at 5.08 1.27 270)
-					(length 2.54) hide
+					(length 2.54)
+					(hide yes)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 1.27 270)
+					(length 2.54)
+					(hide yes)
 					(name ""
 						(effects
 							(font
@@ -1318,115 +1457,8 @@
 						)
 					)
 				)
-				(pin input line
-					(at 0 -6.35 90)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 1.27 270)
-					(length 2.54) hide
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 1.27 270)
-					(length 2.54) hide
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 1.27 270)
-					(length 2.54) hide
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 1.27 270)
-					(length 2.54) hide
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 1.27 270)
-					(length 2.54) hide
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "SQS141ELNW-T1_GE3_2"
 			(exclude_from_sim no)
@@ -1550,17 +1582,6 @@
 				)
 			)
 			(symbol "SQS141ELNW-T1_GE3_2_0_1"
-				(circle
-					(center -1.778 1.27)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
 				(polyline
 					(pts
 						(xy -2.54 1.27) (xy -1.778 1.27)
@@ -1597,10 +1618,56 @@
 						(type none)
 					)
 				)
+				(circle
+					(center -1.778 1.27)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -0.508) (xy -1.778 2.032) (xy 1.778 2.032) (xy 1.778 -0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(polyline
 					(pts
 						(xy -0.508 -0.508) (xy 0.508 -0.508)
 					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.016) (xy -0.381 0) (xy 0.381 0) (xy 0 1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 0 0.381)
+					(radius 2.794)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -1619,54 +1686,6 @@
 					)
 					(fill
 						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -0.508) (xy 2.286 -0.508)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 1.27) (xy 0 1.27) (xy 0 -0.508)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.778 -0.508) (xy -1.778 2.032) (xy 1.778 2.032) (xy 1.778 -0.508)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 1.016) (xy -0.381 0) (xy 0.381 0) (xy 0 1.016)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
 					)
 				)
 				(polyline
@@ -1693,9 +1712,10 @@
 						(type none)
 					)
 				)
-				(circle
-					(center 0 0.381)
-					(radius 2.794)
+				(polyline
+					(pts
+						(xy 1.27 -0.508) (xy 2.286 -0.508)
+					)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -1715,29 +1735,24 @@
 						(type outline)
 					)
 				)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy 0 1.27) (xy 0 -0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 			)
 			(symbol "SQS141ELNW-T1_GE3_2_1_1"
 				(pin passive line
-					(at 5.08 1.27 270)
-					(length 2.54) hide
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
 					(at -5.08 1.27 270)
-					(length 2.54) hide
+					(length 2.54)
+					(hide yes)
 					(name ""
 						(effects
 							(font
@@ -1772,8 +1787,141 @@
 					)
 				)
 				(pin passive line
+					(at -5.08 1.27 270)
+					(length 2.54)
+					(hide yes)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 1.27 270)
+					(length 2.54)
+					(hide yes)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 1.27 270)
+					(length 2.54)
+					(hide yes)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 1.27 270)
+					(length 2.54)
+					(hide yes)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 1.27 270)
+					(length 2.54)
+					(hide yes)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 0 -6.35 90)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
 					(at 5.08 1.27 270)
-					(length 2.54) hide
+					(length 2.54)
+					(hide yes)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 1.27 270)
+					(length 2.54)
+					(hide yes)
 					(name ""
 						(effects
 							(font
@@ -1807,118 +1955,13 @@
 						)
 					)
 				)
-				(pin input line
-					(at 0 -6.35 90)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 1.27 270)
-					(length 2.54) hide
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 1.27 270)
-					(length 2.54) hide
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 1.27 270)
-					(length 2.54) hide
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 1.27 270)
-					(length 2.54) hide
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 1.27 270)
-					(length 2.54) hide
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Transistor_FET:FDN340P"
-			(pin_names hide)
+			(pin_names
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1991,6 +2034,18 @@
 			(symbol "FDN340P_0_1"
 				(polyline
 					(pts
+						(xy 0.254 1.905) (xy 0.254 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
 						(xy 0.254 0) (xy -2.54 0)
 					)
 					(stroke
@@ -2003,7 +2058,31 @@
 				)
 				(polyline
 					(pts
-						(xy 0.254 1.905) (xy 0.254 -1.905)
+						(xy 0.762 2.286) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 1.778) (xy 3.302 1.778) (xy 3.302 -1.778) (xy 0.762 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.508) (xy 0.762 -0.508)
 					)
 					(stroke
 						(width 0.254)
@@ -2025,60 +2104,11 @@
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy 0.762 0.508) (xy 0.762 -0.508)
-					)
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
 					(stroke
 						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 2.286) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 2.54) (xy 2.54 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 1.778) (xy 3.302 1.778) (xy 3.302 -1.778) (xy 0.762 -1.778)
-					)
-					(stroke
-						(width 0)
 						(type default)
 					)
 					(fill
@@ -2095,6 +2125,52 @@
 					)
 					(fill
 						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
 					)
 				)
 				(polyline
@@ -2121,39 +2197,6 @@
 						(type none)
 					)
 				)
-				(circle
-					(center 1.651 0)
-					(radius 2.794)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.54 -1.778)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(circle
-					(center 2.54 1.778)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
 			)
 			(symbol "FDN340P_1_1"
 				(pin input line
@@ -2167,24 +2210,6 @@
 						)
 					)
 					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 -5.08 90)
-					(length 2.54)
-					(name "S"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2210,7 +2235,26 @@
 						)
 					)
 				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "iclr:SQS141ELNW-T1_GE3"
 			(exclude_from_sim no)
@@ -2334,17 +2378,6 @@
 				)
 			)
 			(symbol "SQS141ELNW-T1_GE3_0_1"
-				(circle
-					(center -1.778 1.27)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
 				(polyline
 					(pts
 						(xy -2.54 1.27) (xy -1.778 1.27)
@@ -2381,10 +2414,56 @@
 						(type none)
 					)
 				)
+				(circle
+					(center -1.778 1.27)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -0.508) (xy -1.778 2.032) (xy 1.778 2.032) (xy 1.778 -0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(polyline
 					(pts
 						(xy -0.508 -0.508) (xy 0.508 -0.508)
 					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.016) (xy -0.381 0) (xy 0.381 0) (xy 0 1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 0 0.381)
+					(radius 2.794)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -2403,54 +2482,6 @@
 					)
 					(fill
 						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -0.508) (xy 2.286 -0.508)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 1.27) (xy 0 1.27) (xy 0 -0.508)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.778 -0.508) (xy -1.778 2.032) (xy 1.778 2.032) (xy 1.778 -0.508)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 1.016) (xy -0.381 0) (xy 0.381 0) (xy 0 1.016)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
 					)
 				)
 				(polyline
@@ -2477,9 +2508,10 @@
 						(type none)
 					)
 				)
-				(circle
-					(center 0 0.381)
-					(radius 2.794)
+				(polyline
+					(pts
+						(xy 1.27 -0.508) (xy 2.286 -0.508)
+					)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -2499,29 +2531,24 @@
 						(type outline)
 					)
 				)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy 0 1.27) (xy 0 -0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 			)
 			(symbol "SQS141ELNW-T1_GE3_1_1"
 				(pin passive line
-					(at 5.08 1.27 270)
-					(length 2.54) hide
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
 					(at -5.08 1.27 270)
-					(length 2.54) hide
+					(length 2.54)
+					(hide yes)
 					(name ""
 						(effects
 							(font
@@ -2556,8 +2583,141 @@
 					)
 				)
 				(pin passive line
+					(at -5.08 1.27 270)
+					(length 2.54)
+					(hide yes)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 1.27 270)
+					(length 2.54)
+					(hide yes)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 1.27 270)
+					(length 2.54)
+					(hide yes)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 1.27 270)
+					(length 2.54)
+					(hide yes)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 1.27 270)
+					(length 2.54)
+					(hide yes)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 0 -6.35 90)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
 					(at 5.08 1.27 270)
-					(length 2.54) hide
+					(length 2.54)
+					(hide yes)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 1.27 270)
+					(length 2.54)
+					(hide yes)
 					(name ""
 						(effects
 							(font
@@ -2591,115 +2751,8 @@
 						)
 					)
 				)
-				(pin input line
-					(at 0 -6.35 90)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 1.27 270)
-					(length 2.54) hide
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 1.27 270)
-					(length 2.54) hide
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 1.27 270)
-					(length 2.54) hide
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 1.27 270)
-					(length 2.54) hide
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 1.27 270)
-					(length 2.54) hide
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "iclr:XT60PW-F"
 			(pin_names
@@ -2879,6 +2932,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "iclr:XT60PW-M"
 			(pin_names
@@ -3022,6 +3076,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
@@ -3101,7 +3156,8 @@
 			(symbol "GND_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "GND"
 						(effects
 							(font
@@ -3118,12 +3174,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:VBUS"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -3195,7 +3256,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -3207,7 +3268,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -3238,7 +3299,30 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(text "BATT"
+		(exclude_from_sim no)
+		(at 53.594 40.132 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "068e409b-6ebc-4592-9981-c2254d9bf0a1")
+	)
+	(text "SYS"
+		(exclude_from_sim no)
+		(at 53.848 136.652 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "175ca107-d530-4f4a-a575-c5edbe3ab352")
 	)
 	(junction
 		(at 102.87 40.64)
@@ -3830,31 +3914,8 @@
 		)
 		(uuid "e4c3a3c6-8a69-4ac2-86a5-8a75b2d0ca6e")
 	)
-	(text "BATT"
-		(exclude_from_sim no)
-		(at 53.594 40.132 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "068e409b-6ebc-4592-9981-c2254d9bf0a1")
-	)
-	(text "SYS"
-		(exclude_from_sim no)
-		(at 53.848 136.652 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "175ca107-d530-4f4a-a575-c5edbe3ab352")
-	)
 	(label "GATE2"
 		(at 123.19 151.13 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3865,7 +3926,6 @@
 	)
 	(label "GATE1"
 		(at 123.19 52.07 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3876,7 +3936,6 @@
 	)
 	(label "GATE2"
 		(at 123.19 95.25 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3887,7 +3946,6 @@
 	)
 	(label "STAT"
 		(at 133.35 71.12 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3898,7 +3956,6 @@
 	)
 	(label "SENSE"
 		(at 151.13 66.04 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3909,7 +3966,6 @@
 	)
 	(label "SENSE"
 		(at 246.38 117.602 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3920,7 +3976,6 @@
 	)
 	(label "STAT"
 		(at 247.142 139.7 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3938,7 +3993,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0c4da781-e6bf-4493-a034-4659beec69c1")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR0113"
 			(at 101.6 118.11 0)
 			(effects
 				(font
@@ -3986,9 +4041,9 @@
 			(uuid "8faaa7dc-45af-478a-964f-46b71b1960e3")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#PWR014")
+					(reference "#PWR0113")
 					(unit 1)
 				)
 			)
@@ -4004,7 +4059,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0cb596a8-9665-4753-aeca-aad64e4ebb07")
-		(property "Reference" "Q3"
+		(property "Reference" "Q101"
 			(at 109.982 33.02 0)
 			(effects
 				(font
@@ -4153,9 +4208,9 @@
 			(uuid "a3048af5-f1ef-4585-bd49-c720a82cc264")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "Q3")
+					(reference "Q101")
 					(unit 1)
 				)
 			)
@@ -4171,7 +4226,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1354903a-b7d2-4e04-b220-6c6c8f058ef7")
-		(property "Reference" "U2"
+		(property "Reference" "U102"
 			(at 125.2094 100.4402 0)
 			(effects
 				(font
@@ -4235,9 +4290,9 @@
 			(uuid "cce13a3b-854c-49ae-8b19-551eed5c4f96")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "U2")
+					(reference "U102")
 					(unit 1)
 				)
 			)
@@ -4253,7 +4308,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "18281f36-c6ba-4005-bf96-802f399a861b")
-		(property "Reference" "#PWR0101"
+		(property "Reference" "#PWR0103"
 			(at 74.93 44.45 0)
 			(effects
 				(font
@@ -4301,9 +4356,9 @@
 			(uuid "72c67af8-e025-4b70-8bd2-079b20144624")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#PWR0101")
+					(reference "#PWR0103")
 					(unit 1)
 				)
 			)
@@ -4320,7 +4375,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1e0d1e40-8a57-4ef8-86bf-3da0a778dd61")
-		(property "Reference" "Q2"
+		(property "Reference" "Q104"
 			(at 140.97 139.954 0)
 			(effects
 				(font
@@ -4469,9 +4524,9 @@
 			(uuid "bb7cae24-7dc2-48b5-a06b-7f91ce84a432")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "Q2")
+					(reference "Q104")
 					(unit 1)
 				)
 			)
@@ -4486,7 +4541,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "22a615d1-01b3-4583-aa6d-d68b46b8ea1e")
-		(property "Reference" "R4"
+		(property "Reference" "R105"
 			(at 106.68 115.57 0)
 			(effects
 				(font
@@ -4495,7 +4550,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "1kΩ"
 			(at 106.68 118.11 0)
 			(effects
 				(font
@@ -4538,9 +4593,9 @@
 			(uuid "97486b6b-1bb3-4aa7-8283-10f9f787b326")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "R4")
+					(reference "R105")
 					(unit 1)
 				)
 			)
@@ -4557,7 +4612,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "256f8b47-025c-42e3-8ae6-5daa53afb2ff")
-		(property "Reference" "#PWR02"
+		(property "Reference" "#PWR0122"
 			(at 232.41 151.13 0)
 			(effects
 				(font
@@ -4605,9 +4660,9 @@
 			(uuid "7fa6b61a-1857-4f02-9608-72111b4a01e3")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#PWR02")
+					(reference "#PWR0122")
 					(unit 1)
 				)
 			)
@@ -4622,7 +4677,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "310624be-94e7-41e8-82c5-eed58c0e629b")
-		(property "Reference" "R3"
+		(property "Reference" "R101"
 			(at 80.772 64.77 0)
 			(effects
 				(font
@@ -4631,7 +4686,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "1kΩ"
 			(at 80.772 67.31 0)
 			(effects
 				(font
@@ -4674,9 +4729,9 @@
 			(uuid "5cbc8851-9f57-45b1-9733-e16b69f14e02")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "R3")
+					(reference "R101")
 					(unit 1)
 				)
 			)
@@ -4692,7 +4747,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "31e9a71f-5f59-45dd-8fb1-2fc704fecaed")
-		(property "Reference" "#PWR03"
+		(property "Reference" "#PWR0111"
 			(at 96.52 63.5 0)
 			(effects
 				(font
@@ -4741,9 +4796,9 @@
 			(uuid "670bb343-b46d-47b1-8211-e3ae1090f004")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#PWR03")
+					(reference "#PWR0111")
 					(unit 1)
 				)
 			)
@@ -4807,7 +4862,7 @@
 			(uuid "9e905264-edd5-4335-aed3-99bed273956b")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "#PWR0104")
 					(unit 1)
@@ -4825,7 +4880,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "497b7c65-4b46-45c4-a655-ab07c1a3acad")
-		(property "Reference" "J3"
+		(property "Reference" "J104"
 			(at 244.348 86.36 0)
 			(effects
 				(font
@@ -4924,9 +4979,9 @@
 			(uuid "19a81397-aeec-4b20-afdc-c9d381e8f23e")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "J3")
+					(reference "J104")
 					(unit 1)
 				)
 			)
@@ -4937,12 +4992,12 @@
 		(at 99.06 168.91 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4991b5b8-6fdc-4e68-a047-313feaf59a88")
-		(property "Reference" "H1"
+		(property "Reference" "H101"
 			(at 101.6 166.3699 0)
 			(effects
 				(font
@@ -4991,9 +5046,9 @@
 			(uuid "5be9d9f3-c8f9-452a-9d86-672757fdea41")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "H1")
+					(reference "H101")
 					(unit 1)
 				)
 			)
@@ -5008,7 +5063,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5234fa86-d9c9-44ae-8aad-5cc4bb53aecd")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR0107"
 			(at 82.55 67.31 0)
 			(effects
 				(font
@@ -5056,9 +5111,9 @@
 			(uuid "9eef58c0-efd3-49cc-8a36-2dbffc16f406")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#PWR013")
+					(reference "#PWR0107")
 					(unit 1)
 				)
 			)
@@ -5074,7 +5129,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "56fd1323-b3d4-40fb-a5a3-8c320a767d35")
-		(property "Reference" "#PWR0102"
+		(property "Reference" "#PWR0116"
 			(at 123.19 85.09 0)
 			(effects
 				(font
@@ -5122,9 +5177,9 @@
 			(uuid "4cb341a3-e9cf-45fc-a94c-c7fae6c71aea")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#PWR0102")
+					(reference "#PWR0116")
 					(unit 1)
 				)
 			)
@@ -5139,7 +5194,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5bd66362-1941-44e6-8601-9d8e7f035162")
-		(property "Reference" "#PWR017"
+		(property "Reference" "#PWR0118"
 			(at 180.34 69.85 0)
 			(effects
 				(font
@@ -5187,9 +5242,9 @@
 			(uuid "8c3c3828-e6ee-4beb-bd47-0d3766fb5e99")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#PWR017")
+					(reference "#PWR0118")
 					(unit 1)
 				)
 			)
@@ -5204,7 +5259,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5f9e4d9c-5ed1-43bd-8640-3840972f4743")
-		(property "Reference" "#PWR09"
+		(property "Reference" "#PWR0110"
 			(at 96.52 40.64 0)
 			(effects
 				(font
@@ -5252,9 +5307,9 @@
 			(uuid "09961cdf-e620-4d46-935f-7e68a56dd61d")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#PWR09")
+					(reference "#PWR0110")
 					(unit 1)
 				)
 			)
@@ -5269,7 +5324,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "627d06ad-0873-4802-bd0c-83c63fdc01b1")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR0106"
 			(at 78.74 135.89 0)
 			(effects
 				(font
@@ -5317,9 +5372,9 @@
 			(uuid "701382ba-3c45-47f3-ad31-27d110bc6cdb")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#PWR07")
+					(reference "#PWR0106")
 					(unit 1)
 				)
 			)
@@ -5335,8 +5390,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "64daac30-307c-41ca-a354-4bc58d429b29")
-		(property "Reference" "D1"
-			(at 235.331 127.4358 90)
+		(property "Reference" "D102"
+			(at 236.22 126.8094 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5344,8 +5399,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "SYS_LED"
-			(at 235.331 129.3568 90)
+		(property "Value" "LED_BLUE"
+			(at 236.22 129.3494 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5387,9 +5442,9 @@
 			(uuid "5741787b-5cd2-4268-838f-c53f2ce6d344")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "D1")
+					(reference "D102")
 					(unit 1)
 				)
 			)
@@ -5404,7 +5459,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "741e533e-53d8-4602-93ef-23d286189cf5")
-		(property "Reference" "#PWR010"
+		(property "Reference" "#PWR0108"
 			(at 88.9 67.31 0)
 			(effects
 				(font
@@ -5452,9 +5507,9 @@
 			(uuid "dce925bb-9fb5-404a-a167-a2320c14a065")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#PWR010")
+					(reference "#PWR0108")
 					(unit 1)
 				)
 			)
@@ -5470,7 +5525,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "749106f1-fb38-4ef8-b07b-18c5a8c03136")
-		(property "Reference" "#PWR06"
+		(property "Reference" "#PWR0121"
 			(at 227.33 98.552 0)
 			(effects
 				(font
@@ -5518,9 +5573,9 @@
 			(uuid "28b00812-484f-4bbc-acb7-55fce1fca809")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#PWR06")
+					(reference "#PWR0121")
 					(unit 1)
 				)
 			)
@@ -5535,7 +5590,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "75c9dc3b-bdb3-44c0-9e8d-52a07654b512")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR0101"
 			(at 67.31 95.25 0)
 			(effects
 				(font
@@ -5583,9 +5638,9 @@
 			(uuid "33f09755-538e-4a59-9824-60cdde33c26d")
 		)
 		(instances
-			(project ""
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#PWR05")
+					(reference "#PWR0101")
 					(unit 1)
 				)
 			)
@@ -5600,7 +5655,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7b9158e7-abcc-436e-be45-331f64bb6bf5")
-		(property "Reference" "#PWR018"
+		(property "Reference" "#PWR0119"
 			(at 180.34 113.03 0)
 			(effects
 				(font
@@ -5648,9 +5703,9 @@
 			(uuid "0bde6cb1-ad46-4ec6-a04e-debe68391f4d")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#PWR018")
+					(reference "#PWR0119")
 					(unit 1)
 				)
 			)
@@ -5666,7 +5721,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "80094b70-85ab-4ff6-934b-60d5ee65023a")
-		(property "Reference" "U1"
+		(property "Reference" "U101"
 			(at 125.2094 57.2602 0)
 			(effects
 				(font
@@ -5730,9 +5785,9 @@
 			(uuid "cbd8faed-e1f8-4406-87c8-58b2c504a5d4")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "U1")
+					(reference "U101")
 					(unit 1)
 				)
 			)
@@ -5748,7 +5803,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "80fbc66f-c608-47a7-96f5-44de4f615e6d")
-		(property "Reference" "Q4"
+		(property "Reference" "Q103"
 			(at 133.858 32.766 0)
 			(effects
 				(font
@@ -5897,9 +5952,9 @@
 			(uuid "8f980c80-47a0-423c-bee5-65c09bd4d55f")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "Q4")
+					(reference "Q103")
 					(unit 1)
 				)
 			)
@@ -5914,7 +5969,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "8ce5a363-90dd-49e7-89d9-55e474e23813")
-		(property "Reference" "#PWR011"
+		(property "Reference" "#PWR0120"
 			(at 222.25 92.71 0)
 			(effects
 				(font
@@ -5962,9 +6017,9 @@
 			(uuid "0585058d-44f0-40e3-8c0d-2599eb301a60")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#PWR011")
+					(reference "#PWR0120")
 					(unit 1)
 				)
 			)
@@ -5979,7 +6034,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "8fdc09c3-79fd-4bf0-8dfe-ff739f51cde2")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR0105"
 			(at 77.47 39.37 0)
 			(effects
 				(font
@@ -6027,9 +6082,9 @@
 			(uuid "c4786849-ef62-45b5-af4b-c2acd95d9cb6")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#PWR08")
+					(reference "#PWR0105")
 					(unit 1)
 				)
 			)
@@ -6044,7 +6099,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "947659ff-701e-47a1-b85e-51add45013f3")
-		(property "Reference" "R1"
+		(property "Reference" "R102"
 			(at 90.424 64.77 0)
 			(effects
 				(font
@@ -6053,7 +6108,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "470k"
+		(property "Value" "470kΩ"
 			(at 90.424 67.31 0)
 			(effects
 				(font
@@ -6096,9 +6151,9 @@
 			(uuid "31a20dbf-6d10-4335-8cbd-70807c74dd08")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "R1")
+					(reference "R102")
 					(unit 1)
 				)
 			)
@@ -6114,7 +6169,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a9e4122b-e1e1-4555-8c6d-682ec0d83f50")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR0114"
 			(at 101.6 133.35 0)
 			(effects
 				(font
@@ -6162,9 +6217,9 @@
 			(uuid "ec7f11fa-ce2f-420b-999e-61d610ca49c8")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#PWR016")
+					(reference "#PWR0114")
 					(unit 1)
 				)
 			)
@@ -6179,7 +6234,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ac09aad5-33bb-43ea-a239-fa4e22bd8518")
-		(property "Reference" "R6"
+		(property "Reference" "R104"
 			(at 93.472 42.275 0)
 			(effects
 				(font
@@ -6187,7 +6242,7 @@
 				)
 			)
 		)
-		(property "Value" "3k"
+		(property "Value" "3kΩ"
 			(at 93.472 44.196 0)
 			(effects
 				(font
@@ -6229,9 +6284,9 @@
 			(uuid "d8bbb583-bd5b-4b40-8729-8200db2d2826")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "R6")
+					(reference "R104")
 					(unit 1)
 				)
 			)
@@ -6246,16 +6301,16 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b031e0db-bb43-4f38-a2c9-5fc1b28daece")
-		(property "Reference" "D2"
-			(at 90.17 48.371 90)
+		(property "Reference" "D101"
+			(at 88.138 48.371 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "BATT_LED"
-			(at 90.17 50.292 90)
+		(property "Value" "LED_YELLOW"
+			(at 88.138 50.292 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6296,9 +6351,9 @@
 			(uuid "d40a8283-186d-456c-942e-0b26f34d6397")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "D2")
+					(reference "D101")
 					(unit 1)
 				)
 			)
@@ -6314,7 +6369,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "bd70cb30-fb80-4819-8695-036c532484ae")
-		(property "Reference" "J2"
+		(property "Reference" "J103"
 			(at 64.77 125.476 0)
 			(effects
 				(font
@@ -6405,9 +6460,9 @@
 			(uuid "7aa052d0-9b16-4032-98c4-1554e6486510")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "J2")
+					(reference "J103")
 					(unit 1)
 				)
 			)
@@ -6423,7 +6478,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d239e1a3-08c8-45e2-9959-7e4e5303b2cf")
-		(property "Reference" "J1"
+		(property "Reference" "J102"
 			(at 64.77 31.7469 0)
 			(effects
 				(font
@@ -6514,9 +6569,9 @@
 			(uuid "b1074f14-d9b1-488c-9ce1-52a2bed8b998")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "J1")
+					(reference "J102")
 					(unit 1)
 				)
 			)
@@ -6532,7 +6587,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d8b0f70d-6370-44f0-8d5b-94463e04bcc8")
-		(property "Reference" "#PWR0103"
+		(property "Reference" "#PWR0117"
 			(at 123.19 128.27 0)
 			(effects
 				(font
@@ -6580,9 +6635,9 @@
 			(uuid "ae2eec85-2e85-46d8-9f3d-6979a79ec0cf")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#PWR0103")
+					(reference "#PWR0117")
 					(unit 1)
 				)
 			)
@@ -6598,7 +6653,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "db9f655a-cf46-456b-a251-167f6acf3a6a")
-		(property "Reference" "Q1"
+		(property "Reference" "Q102"
 			(at 103.632 138.938 0)
 			(effects
 				(font
@@ -6747,9 +6802,9 @@
 			(uuid "3c1a39e5-fd9f-4cd2-a77b-250e7144a64d")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "Q1")
+					(reference "Q102")
 					(unit 1)
 				)
 			)
@@ -6766,7 +6821,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dd0c8d26-8e87-47c6-b387-7d0d7440387b")
-		(property "Reference" "#PWR04"
+		(property "Reference" "#PWR0102"
 			(at 67.31 100.33 0)
 			(effects
 				(font
@@ -6814,9 +6869,9 @@
 			(uuid "ee32568f-fc89-406f-acc5-f9c39c297cfe")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#PWR04")
+					(reference "#PWR0102")
 					(unit 1)
 				)
 			)
@@ -6832,7 +6887,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e3b31aff-a9b3-4393-a16d-e982a88b9bcc")
-		(property "Reference" "R7"
+		(property "Reference" "R107"
 			(at 234.95 118.8719 0)
 			(effects
 				(font
@@ -6841,7 +6896,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "3k"
+		(property "Value" "3kΩ"
 			(at 234.95 121.4119 0)
 			(effects
 				(font
@@ -6884,9 +6939,9 @@
 			(uuid "9655079a-66bd-46df-9b03-c186ae7a8e4b")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "R7")
+					(reference "R107")
 					(unit 1)
 				)
 			)
@@ -6902,7 +6957,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e43476a8-3541-47d1-b462-9a1428a7c957")
-		(property "Reference" "R8"
+		(property "Reference" "R108"
 			(at 245.11 132.5879 0)
 			(effects
 				(font
@@ -6911,7 +6966,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "470k"
+		(property "Value" "470kΩ"
 			(at 245.11 135.1279 0)
 			(effects
 				(font
@@ -6954,9 +7009,9 @@
 			(uuid "f855e26a-ca36-46d0-87c9-acd556f8e4c7")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "R8")
+					(reference "R108")
 					(unit 1)
 				)
 			)
@@ -6972,7 +7027,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ea2e63b6-ee89-4afe-a276-60111e6980a2")
-		(property "Reference" "#PWR01"
+		(property "Reference" "#PWR0109"
 			(at 88.9 85.09 0)
 			(effects
 				(font
@@ -7020,9 +7075,9 @@
 			(uuid "bca5e69b-7873-48aa-9522-f5cac27c40b9")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#PWR01")
+					(reference "#PWR0109")
 					(unit 1)
 				)
 			)
@@ -7038,7 +7093,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "eabbcb14-a17e-4aff-8e75-6209f0bfe613")
-		(property "Reference" "Q5"
+		(property "Reference" "Q105"
 			(at 228.6 138.4299 0)
 			(effects
 				(font
@@ -7096,9 +7151,9 @@
 			(uuid "ff44785c-eb2d-4716-a8a3-b9ef056a17bd")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "Q5")
+					(reference "Q105")
 					(unit 1)
 				)
 			)
@@ -7114,7 +7169,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f082927d-34b2-4087-a37b-7bd4e12294b4")
-		(property "Reference" "#PWR0106"
+		(property "Reference" "#PWR0115"
 			(at 109.22 177.8 0)
 			(effects
 				(font
@@ -7162,9 +7217,9 @@
 			(uuid "0c823bf6-5c9f-44ab-afb8-3ce81cb88879")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#PWR0106")
+					(reference "#PWR0115")
 					(unit 1)
 				)
 			)
@@ -7179,7 +7234,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f128b8d9-4a86-4236-88da-b0baa4984e0f")
-		(property "Reference" "R5"
+		(property "Reference" "R106"
 			(at 103.124 123.19 0)
 			(effects
 				(font
@@ -7188,7 +7243,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "10kΩ"
 			(at 103.124 125.73 0)
 			(effects
 				(font
@@ -7231,9 +7286,9 @@
 			(uuid "04e1bf09-d2d1-45e3-a061-d9880bec6e01")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "R5")
+					(reference "R106")
 					(unit 1)
 				)
 			)
@@ -7249,7 +7304,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f2c3cf18-ea84-4042-8af7-228620127b78")
-		(property "Reference" "R2"
+		(property "Reference" "R103"
 			(at 90.3986 75.5563 0)
 			(effects
 				(font
@@ -7258,7 +7313,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "10kΩ"
 			(at 90.3986 77.4773 0)
 			(effects
 				(font
@@ -7301,9 +7356,9 @@
 			(uuid "f9a31339-8e8f-498b-8f35-c8c7b4962029")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "R2")
+					(reference "R103")
 					(unit 1)
 				)
 			)
@@ -7318,7 +7373,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f41c9c28-835d-4e8b-874d-b6432f5dbe18")
-		(property "Reference" "J4"
+		(property "Reference" "J101"
 			(at 55.626 92.964 0)
 			(effects
 				(font
@@ -7368,9 +7423,9 @@
 			(uuid "27e8b091-c9cc-414f-bff7-adc4a44a8b80")
 		)
 		(instances
-			(project ""
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "J4")
+					(reference "J101")
 					(unit 1)
 				)
 			)
@@ -7385,7 +7440,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f5776b1a-2c1e-4074-bed5-e7b5f98ea62d")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR0112"
 			(at 97.79 109.22 0)
 			(effects
 				(font
@@ -7433,9 +7488,9 @@
 			(uuid "a59c68c3-b9e0-4dfa-8f27-ef50b7a19ec7")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#PWR015")
+					(reference "#PWR0112")
 					(unit 1)
 				)
 			)
@@ -7446,12 +7501,12 @@
 		(at 119.38 168.91 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f7c1ca99-43cb-4192-9279-9f672e8ea13c")
-		(property "Reference" "H3"
+		(property "Reference" "H102"
 			(at 121.92 166.3699 0)
 			(effects
 				(font
@@ -7500,9 +7555,9 @@
 			(uuid "82016cfa-3be0-4f81-affd-be670ca45622")
 		)
 		(instances
-			(project "LittleKiran"
+			(project "Witcher"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "H3")
+					(reference "H102")
 					(unit 1)
 				)
 			)
@@ -7513,4 +7568,5 @@
 			(page "1")
 		)
 	)
+	(embedded_fonts no)
 )
